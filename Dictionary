@@ -1,0 +1,86 @@
+Dictionary:
+-----------
+
+>>> my_dict={}
+>>> print(my_dict,type(my_dict))
+{} <class 'dict'>
+>>> print(bool(my_dict))
+False
+>>> my_dict={'one':1,'two':2,'three':3}
+>>> my_dict
+{'one': 1, 'two': 2, 'three': 3}
+>>> my_dict['one']
+1
+>>> my_dict['three']
+3
+>>> print(my_dict.get('one'))
+1
+>>> print(my_dict.get('four')) -- when key is not present
+None
+>>> my_dict.get('four')
+>>> print(my_dict.get('four'))
+None
+>>> my_dict1=my_dict  -- Address location is same
+>>> print(id(my_dict),id(my_dict1))
+1320297380608 1320297380608
+
+>>> y=my_dict.copy()  --> Address location is different
+>>> y
+{'one': 1, 'two': 2, 'three': 3}
+>>> id(y)
+1320297450304
+>>> id(my_dict)
+1320297380288
+
+>>> my_dict['four']=4
+>>> my_dict
+{'one': 1, 'two': 2, 'three': 3, 'four': 4}
+>>> my_dict.clear()
+>>> print(my_dict.keys())
+dict_keys(['one', 'two', 'three'])
+>>> print(my_dict.values())
+dict_values([1, 2, 3])
+
+>>> my_dict={'one':1,'two':2}
+>>> y={'three':3}
+>>> my_dict.update(y)
+>>> my_dict
+{'one': 1, 'two': 2, 'three': 3}
+>>>
+
+>>> my_dict.pop('three')
+3
+>>> my_dict
+{'one': 1, 'two': 2}
+>>> my_dict.pop('one')
+1
+>>> my_dict
+{'two': 2}
+
+>>> my_dict
+{'two': 2, 'thre': 3, 'four': 4}
+>>> my_dict.popitem()  ---> Removes last item in the dictionary
+('four', 4)
+
+>>> return_value=my_dict.popitem()
+>>> print(return_value)
+('four', 4)
+
+>>> keys=['a','e','i','o','u']
+>>> new_dict=dict.fromkeys(keys)
+>>> new_dict
+{'a': None, 'e': None, 'i': None, 'o': None, 'u': None}
+>>> new_dict['a']="Santhosh"
+>>> new_dict
+{'a': 'Santhosh', 'e': None, 'i': None, 'o': None, 'u': None}
+
+>>> my_dict={}
+>>> my_dict.setdefault('a',50)
+50
+>>> my_dict
+{'a': 50}
+>>> my_dict.setdefault('a','hello')  --> if a key has value then it will not change otherwise it will change
+50
+>>> my_dict
+{'a': 50}
+>>>
