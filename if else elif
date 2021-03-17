@@ -1,0 +1,41 @@
+If else conditional statement:
+------------------------------
+
+get_title.py
+
+usr_str=input("enter your string: ")
+usr_cnf=input("Do you want to convert your string into title? yes or no:")
+if usr_cnf=="yes":
+	print(usr_str.title())
+else:
+	print(usr_str)
+
+greater_number.py
+-----------------
+a=eval(input("Enter a"))
+b=eval(input("enter b"))
+
+if a > b:
+	print(f'{a} is greater than {b}')
+else:
+	print(f'{b} is greater than {a}')
+
+another program.py
+-----------------
+if a > b:
+	print(f'{a} is greater than {b}')
+elif a < b:
+	print(f'{a} is less than {a}')
+elif a==b:
+	print("a and b are equal")
+ 
+another program.py
+------------------
+
+if a > b:
+	print(f'{a} is greater than {b}')
+elif a < b:
+	print(f'{a} is less than {a}')
+else:
+	print("a and b are equal")
+ 
