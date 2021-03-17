@@ -1,0 +1,59 @@
+If Condition:
+-------------
+
+if is called simple conditional statement.
+Used to control the execution of set of lines or block of code or one line.
+
+if expression:
+	statement1
+	statement2
+
+Comparision Operators
+1.Identity
+2.Membership
+3.Logical Operators
+
+[santhosh@oc5357850817 ~]$ cat test.py 
+import os
+t_w=os.get_terminal_size().columns
+print(t_w)
+given_str=input("Enter the string: ")
+print(given_str)
+usr_cnf=input("enter yes or no)
+
+#if True:
+if user_cnf=="yes":
+	print(given_str.center(t_w))
+	print(given_str.ljust(t_w))
+	print(given_str.rjust(t_w))
+[santhosh@oc5357850817 ~]$ python3 test.py 
+83
+Enter the string: Santhosh
+Santhosh
+                                      Santhosh                                     
+Santhosh                                                                           
+                                                                           Santhosh
+[santhosh@oc5357850817 ~]$ vi convert_string.py
+user_str=input("enter string value")
+usr_cnf=input("Do you want to convert your string to lower case: yes or no ?")
+
+if usr_cnf=="yes":
+	print(usr_cnf.lower())
+
+[santhosh@oc5357850817 ~]$ python3 convert_string.py 
+enter string valueHey Man Hi
+Do you want to convert your string to lower case: yes or no ?yes
+hey man hi
+
+[santhosh@oc5357850817 ~]$ vi find_num.py
+
+my_even_no=[0,2,4,6,8]
+
+usr_num=eval(input("enter number"))
+
+if usr_num in my_even_no:
+	print("Given Number is Even Number")
+[santhosh@oc5357850817 ~]$ python3 find_num.py 
+enter number4
+Given Number is Even Number
+
