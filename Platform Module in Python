@@ -71,6 +71,8 @@ x86_64
 Linux-3.10.0-1160.15.2.el7.x86_64-x86_64-with-redhat-7.9-Maipo
 >>> print(platform.architecture())
 ('64bit', 'ELF')
+>>> print(platform.processor())
+x86_64
 
 
 
