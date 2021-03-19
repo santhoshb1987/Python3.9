@@ -73,6 +73,9 @@ Linux-3.10.0-1160.15.2.el7.x86_64-x86_64-with-redhat-7.9-Maipo
 ('64bit', 'ELF')
 >>> print(platform.processor())
 x86_64
-
+>>> print(platform.node())
+oc5357850817.ibm.com
+>>> print(platform.uname())
+uname_result(system='Linux', node='oc5357850817.ibm.com', release='3.10.0-1160.15.2.el7.x86_64', version='#1 SMP Thu Jan 21 16:15:07 EST 2021', machine='x86_64', processor='x86_64')
 
 
