@@ -1,0 +1,171 @@
+Introduction to Python Modules:
+-------------------------------
+
+What is a module ?
+
+A module is a file containing Python definitions and statements.That means, module containing python functions,classes and variables.
+
+What is the use of module ?
+--> Reusability
+
+
+Note:
+If script name is mymodule.py then module name is mymodule
+
+Types of Python Modules:
+
+mymodule.py
+-----------
+my_value="santhosh"
+
+first_script.py
+---------------
+import mymodule --> refence module name without .py 
+
+print(mymodule.my_value)
+
+There are different modules in Python:
+Default modules come with python installation
+
+second_script.py
+---------------
+import math
+
+print(math.pi)
+
+
+>>>help("modules")
+
+--> It will list all the modules which are present in python
+
+Please wait a moment while I gather a list of all available modules...
+
+__future__          _xxtestfuzz         hashlib             set_formula
+_abc                abc                 heapq               shelve
+_ast                aifc                hmac                shlex
+_asyncio            antigravity         html                shutil
+_bisect             argparse            http                signal
+_blake2             array               idlelib             site
+_bootlocale         ast                 imaplib             smtpd
+_codecs             asynchat            imghdr              smtplib
+_codecs_cn          asyncio             imp                 sndhdr
+_codecs_hk          asyncore            importlib           socket
+_codecs_iso2022     atexit              inspect             socketserver
+_codecs_jp          audioop             io                  spwd
+_codecs_kr          base64              ipaddress           sqlite3
+_codecs_tw          bdb                 itertools           sre_compile
+_collections        binascii            json                sre_constants
+_collections_abc    binhex              keyword             sre_parse
+_compat_pickle      bisect              lib2to3             ssl
+_compression        builtins            linecache           stat
+_contextvars        bz2                 locale              statistics
+_crypt              cProfile            logging             string
+_csv                calendar            lzma                stringprep
+_ctypes_test        cgi                 macpath             struct
+_datetime           cgitb               mailbox             subprocess
+_dbm                chunk               mailcap             sunau
+_decimal            cmath               marshal             symbol
+_dummy_thread       cmd                 math                symtable
+_elementtree        code                mimetypes           sys
+_functools          codecs              mmap                sysconfig
+_gdbm               codeop              modulefinder        syslog
+_hashlib            collections         multiprocessing     system
+_heapq              colorsys            netrc               tabnanny
+_imp                compileall          nis                 tarfile
+_io                 compress            nntplib             telnetlib
+_json               concurrent          ntpath              tempfile
+_locale             condition           nturl2path          termios
+_lsprof             configparser        numbers             test
+_markupbase         contextlib          opcode              textwrap
+_md5                contextvars         operator            this
+_multibytecodec     copy                optparse            threading
+_multiprocessing    copyreg             os                  time
+_opcode             crypt               ossaudiodev         timeit
+_operator           csv                 parser              tkinter
+_osx_support        ctypes              pathlib             token
+_pickle             curses              pdb                 tokenize
+_posixsubprocess    dataclasses         pickle              trace
+_py_abc             datetime            pickletools         traceback
+_pydecimal          dbm                 pipes               tracemalloc
+_pyio               decimal             pkgutil             tty
+_queue              difflib             platform            turtle
+_random             dis                 plistlib            turtledemo
+_sha1               distutils           poplib              types
+_sha256             doctest             posix               typing
+_sha3               dummy_threading     posixpath           unicodedata
+_sha512             email               pprint              unittest
+_signal             encodings           profile             urllib
+_sitebuiltins       ensurepip           pstats              uu
+_socket             enum                pty                 uuid
+_sre                errno               pwd                 venv
+_ssl                faulthandler        py_compile          warnings
+_stat               fcntl               pyclbr              wave
+_string             filecmp             pydoc               weakref
+_strptime           fileinput           pydoc_data          webbrowser
+_struct             fnmatch             pyexpat             working_with_csv
+_symtable           formatter           queue               wsgiref
+_sysconfigdata_m_linux_x86_64-linux-gnu fractions           quopri              xdrlib
+_testbuffer         ftplib              random              xml
+_testcapi           functools           re                  xmlrpc
+_testimportmultiple gc                  reprlib             xxlimited
+_testmultiphase     genericpath         resource            xxsubtype
+_thread             getopt              rlcompleter         zipapp
+_threading_local    getpass             runpy               zipfile
+_tracemalloc        gettext             sched               zipimport
+_warnings           glob                secrets             zlib
+_weakref            grp                 select              
+_weakrefset         gzip                selectors           
+
+>>> import math
+>>> help(math)
+>>> dir(math)
+['__doc__', '__file__', '__loader__', '__name__', '__package__', '__spec__', 'acos', 'acosh', 'asin', 'asinh', 'atan', 'atan2', 'atanh', 'ceil', 'copysign', 'cos', 'cosh', 'degrees', 'e', 'erf', 'erfc', 'exp', 'expm1', 'fabs', 'factorial', 'floor', 'fmod', 'frexp', 'fsum', 'gamma', 'gcd', 'hypot', 'inf', 'isclose', 'isfinite', 'isinf', 'isnan', 'ldexp', 'lgamma', 'log', 'log10', 'log1p', 'log2', 'modf', 'nan', 'pi', 'pow', 'radians', 'remainder', 'sin', 'sinh', 'sqrt', 'tan', 'tanh', 'tau', 'trunc']
+>>> math.pi
+3.141......
+>>>math.pow(2,3)
+8.0
+>>> math.factorial(5)
+120
+>>> import csv
+>>> dir(csv)
+['Dialect', 'DictReader', 'DictWriter', 'Error', 'OrderedDict', 'QUOTE_ALL', 'QUOTE_MINIMAL', 'QUOTE_NONE', 'QUOTE_NONNUMERIC', 'Sniffer', 'StringIO', '_Dialect', '__all__', '__builtins__', '__cached__', '__doc__', '__file__', '__loader__', '__name__', '__package__', '__spec__', '__version__', 'excel', 'excel_tab', 'field_size_limit', 'get_dialect', 'list_dialects', 're', 'reader', 'register_dialect', 'unix_dialect', 'unregister_dialect', 'writer']
+>>> 
+
+We have n number of third party modules.
+We need to install thm using pip 
+
+import xlwt
+ModuleNotFoundError: No module named 'xlwt'
+
+pip3 install xlwt --> to install xlwt package
+/usr/local/lib/python3.6/site-packages/xlwt
+
+
+--> importing in different ways
+
+method 1
+from math import * / from math import pi,pow  --> it will get all the modules here so that you no need to explicitly mention the module name
+
+print(pi)
+print(pow(3,2))
+
+method 0.
+2
+import platform
+print(platform.system())
+
+method 3
+import platform as pt
+print(pt.system())
+
+Other modules:
+
+import platform
+import math
+import sys
+import os
+import subprocess
+
+or
+import platform,math,sys,os,subprocess
+
