@@ -1,0 +1,10 @@
+Practice with COnditional statements:
+-------------------------------------
+
+num=eval(input("Enter any number between 1-10 range: "))
+
+num_word={1:'one',2:'two',3:'three',4:'four',5:'five'}
+if num in [1,2,3,4,5]:
+	print(num_word.get(num))
+else:
+	print("given number is not in the range 1-5")
