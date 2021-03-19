@@ -1,0 +1,76 @@
+Platform Module:
+---------------
+
+The platform module is used to access the underlying platforms data such as hardware, operating system and interpreter version info.
+
+How to use platform module in a script?
+---------------------------------------
+
+First import platform module using below syntax
+
+import platform
+or
+import platform as pt
+or
+from platform import *
+or
+from platform import system,platform
+
+How to list all functions and variables of a platform modules?
+--------------------------------------------------------------
+
+There is a built-in functions to list all the functions names(or variable names) in a module and that is dir() function
+
+Then use dir() function as:
+
+print(dir(platform))
+
+How to get help of a platform module?
+------------------------------------
+From script: print(help(platform))
+From Python command line: help(platform)
+
+>>> import platform
+>>> dir(platform)
+['DEV_NULL', '_UNIXCONFDIR', '_WIN32_CLIENT_RELEASES', '_WIN32_SERVER_RELEASES', '__builtins__', '__cached__', '__copyright__', '__doc__', '__file__', '__loader__', '__name__', '__package__', '__spec__', '__version__', '_comparable_version', '_component_re', '_default_architecture', '_dist_try_harder', '_follow_symlinks', '_ironpython26_sys_version_parser', '_ironpython_sys_version_parser', '_java_getprop', '_libc_search', '_linux_distribution', '_lsb_release_version', '_mac_ver_xml', '_node', '_norm_version', '_parse_release_file', '_platform', '_platform_cache', '_pypy_sys_version_parser', '_release_filename', '_release_version', '_supported_dists', '_sys_version', '_sys_version_cache', '_sys_version_parser', '_syscmd_file', '_syscmd_uname', '_syscmd_ver', '_uname_cache', '_ver_output', '_ver_stages', 'architecture', 'collections', 'dist', 'java_ver', 'libc_ver', 'linux_distribution', 'mac_ver', 'machine', 'node', 'os', 'platform', 'popen', 'processor', 'python_branch', 'python_build', 'python_compiler', 'python_implementation', 'python_revision', 'python_version', 'python_version_tuple', 're', 'release', 'subprocess', 'sys', 'system', 'system_alias', 'uname', 'uname_result', 'version', 'warnings', 'win32_ver']
+
+>>>len(dir(platform))
+72
+
+>>>help(platform)
+
+working_with_platform.py
+------------------------
+
+import platform
+print(dir(platform))
+print(help(platform))
+
+C:\python37\lib\platform.py
+
+
+import platform
+print(f' This is {platform.system()} os')
+print(f'Python version is: {platform.python_version()}')
+print(platform.python_version_tuple())
+
+>>> type(platform.system)
+<class 'function'>
+>>> type(platform.system())
+<class 'str'>
+>>> platform.system()
+'Linux'
+
+>>> import platform 
+>>> print(platform.machine())
+x86_64
+>>> print(platform.release())
+3.10.0-1160.15.2.el7.x86_64
+>>> 
+>>> print(platform.platform())
+Linux-3.10.0-1160.15.2.el7.x86_64-x86_64-with-redhat-7.9-Maipo
+>>> print(platform.architecture())
+('64bit', 'ELF')
+
+
+
