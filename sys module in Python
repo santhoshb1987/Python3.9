@@ -1,0 +1,66 @@
+sys module:
+-----------
+
+The sys module is used to work with python runtime environment.
+
+Introduction to sys module
+--------------------------
+
+The sys module provides functions and variables used to manipulate different parts of the Python runtime environment.
+
+How to use sys module?
+----------------------
+
+import sys
+
+How to get help on sys module?
+------------------------------
+
+dir(sys),help(sys)
+
+>>> sys.platform
+'linux'
+sys.path
+
+>>> sys.path
+['', '/usr/local/lib/python37.zip', '/usr/local/lib/python3.7', '/usr/local/lib/python3.7/lib-dynload', '/usr/local/lib/python3.7/site-packages']
+
+>>> sys.version
+'3.7.3 (default, May 24 2019, 09:44:03) \n[GCC 4.8.5 20150623 (Red Hat 4.8.5-36)]'
+
+>>> sys.version_info
+sys.version_info(major=3, minor=7, micro=3, releaselevel='final', serial=0)
+
+>>>print(sys.modules)
+
+
+>>>sys.exit()  -- to exit python from the program
+
+sys_exit.sh
+-----------
+[santhosh@oc5357850817 python_code]$ cat sys_exit.sh
+import sys
+
+#sys.exit()   -  0 1 2 numbers you can pass
+
+print("Hello")
+
+[santhosh@oc5357850817 python_code]$ python3 sys_exit.sh 
+Hello
+
+It will exit in between
+
+[santhosh@oc5357850817 python_code]$ cat sys_exit.sh
+import sys
+
+sys.exit()
+
+print("Hello")
+
+[santhosh@oc5357850817 python_code]$ python3 sys_exit.sh 
+[santhosh@oc5357850817 python_code]$ 
+
+
+
+
+
