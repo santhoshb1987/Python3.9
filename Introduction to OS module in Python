@@ -1,0 +1,65 @@
+OS Module:
+----------
+
+(This module is used to work/interact with operating system to automate many more tasks like creating directory,removing directory,identifying current directory and many more)
+
+Operations of os module Four parts of os
+----------------------------------------
+
+os
+os.path
+os.system()
+os.walk()
+
+>>> import os
+>>> dir(os)
+>>> print(os.sep)
+/
+>>> print("C:\\Users\automation\desktop\hi")
+it will print the string as it is
+>>> path="/home/santhosh"
+>>> print(os.getcwd())
+/home/santhosh/python_code
+>>> cwd=os.getcwd()
+>>> print(cwd)
+/home/santhosh/python_code
+---> Windows it will be different
+
+>>os.chdir()
+
+>>> os.chdir("/home/santhosh")
+>>> print(os.getcwd())
+/home/santhosh
+
+
+Simple os operations:
+---------------------
+
+os.sep
+os.getcwd()
+os.chdir(path)
+os.listdir()
+os.listdir(path)
+os.mkdir(path)
+os.makedirs(path) --> recursively directory create function
+os.remove(path)
+os.removedirs(path)---> removes recursively
+os.rmdir(path)
+os.rename(src,dst)
+os.environ()
+os.getuid()
+os.getpid()
+
+>>> os.chdir("/home")
+>>> os.getcwd()
+'/home'
+>>> os.listdir()
+['db2inst3', 'db2inst1', 'db2fenc2', 'mongod', 'santhosh', 'db2fenc1', 'db2inst2']
+
+>>os.mkdir("santhosh")
+
+>>os.makedirs("santhosh/xyz/x")
+>>>os.listdir("santhosh")
+--> this will list all the directories
+>>>os.environ
+
