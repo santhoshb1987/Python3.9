@@ -1,0 +1,133 @@
+os.walk(path):
+--------------
+
+Used to generate directory and file names in a directory tree by walking
+
+Note: First complete for loop then start this os.walk
+
+find path -name *.txt
+/home/xyz
+/home/xyz/dir1
+/home/xyz/dir1/sub1
+
+program.py
+----------
+
+import os
+path="C:\\Users\\santhosh\\scripting"
+print(list(os.walk(path)))
+
+This will return a list with one values remaining are emtpy list
+
+1. path of the directory
+2. Directoryname
+3. Files in the path
+
+Then it will open the 2 and repeats the same
+
+[santhosh@oc5357850817 python_code]$ cat program.py 
+import os
+path="/home/santhosh/python_code"
+print(list(os.walk(path)))
+[santhosh@oc5357850817 python_code]$ python3 program.py 
+[('/home/santhosh/python_code', [], ['.system.py.swp', 'command_line_args.sh', 'compress.py', 'csv_file.csv', 'len_command_line.py', '1', 'command_line_args.py', 'set_formula.py', 'working_with_csv.py', 'system.py', 'sys_exit.sh', 'string_case.py', 'program.py', 'read_pass.py', 'condition.py'])]
+[santhosh@oc5357850817 python_code]$ mkdir TEST
+[santhosh@oc5357850817 python_code]$ python3 program.py 
+[('/home/santhosh/python_code', ['TEST'], ['.system.py.swp', 'command_line_args.sh', 'compress.py', 'csv_file.csv', 'len_command_line.py', '1', 'command_line_args.py', 'set_formula.py', 'working_with_csv.py', 'system.py', 'sys_exit.sh', 'string_case.py', 'program.py', 'read_pass.py', 'condition.py']), ('/home/santhosh/python_code/TEST', [], [])]
+[santhosh@oc5357850817 python_code]$ cd TEST/
+[santhosh@oc5357850817 TEST]$ touch t1 t2 t3
+[santhosh@oc5357850817 TEST]$ cd ..
+[santhosh@oc5357850817 python_code]$ python3 program.py 
+[('/home/santhosh/python_code', ['TEST'], ['.system.py.swp', 'command_line_args.sh', 'compress.py', 'csv_file.csv', 'len_command_line.py', '1', 'command_line_args.py', 'set_formula.py', 'working_with_csv.py', 'system.py', 'sys_exit.sh', 'string_case.py', 'program.py', 'read_pass.py', 'condition.py']), ('/home/santhosh/python_code/TEST', [], ['t3', 't2', 't1'])]
+
+With For loop:
+
+[santhosh@oc5357850817 python_code]$ cat program.py 
+import os
+path="/home/santhosh/python_code"
+print(list(os.walk(path)))
+
+for i in os.walk(path):
+	print(i)
+[santhosh@oc5357850817 python_code]$ python3 program.py 
+[('/home/santhosh/python_code', ['TEST'], ['.system.py.swp', 'command_line_args.sh', 'compress.py', 'csv_file.csv', 'len_command_line.py', '1', 'command_line_args.py', 'set_formula.py', 'working_with_csv.py', 'system.py', 'sys_exit.sh', 'string_case.py', 'program.py', 'read_pass.py', 'condition.py']), ('/home/santhosh/python_code/TEST', [], ['t3', 't2', 't1'])]
+('/home/santhosh/python_code', ['TEST'], ['.system.py.swp', 'command_line_args.sh', 'compress.py', 'csv_file.csv', 'len_command_line.py', '1', 'command_line_args.py', 'set_formula.py', 'working_with_csv.py', 'system.py', 'sys_exit.sh', 'string_case.py', 'program.py', 'read_pass.py', 'condition.py'])
+('/home/santhosh/python_code/TEST', [], ['t3', 't2', 't1'])
+
+--> It is a tuple and you can assign to variables into 3
+
+for r,d,f in os.walk(path):
+	print(r)
+
+
+[santhosh@oc5357850817 python_code]$ cat program.py 
+import os
+path="/home/santhosh/python_code"
+#print(list(os.walk(path)))
+
+for r,d,f in os.walk(path):
+	print(r)
+
+[santhosh@oc5357850817 python_code]$ python3 program.py 
+/home/santhosh/python_code
+/home/santhosh/python_code/TEST
+
+scenario 1:
+-----------
+for r,d,f in os.walk(path,topdown=False):
+	print(r,f)
+
+scenario 2:
+------------
+for r,d,f in os.walk(path):
+	if len(f) !=0:
+		print(r,f)
+
+scenario 3:
+----------
+for r,d,f in os.walk(path):
+	if len(f) !=0:
+		print(r)
+		print(f)
+
+scenario 4:
+-----------
+for r,d,f in os.walk(path):
+	if len(f) !=0:
+		print(r)
+		for each_file in f:
+			print(each_file)
+
+
+scenario 5:
+-----------
+for r,d,f in os.walk(path):
+	if len(f) !=0:
+		print(r)
+		for each_file in f:
+			print(os.path.join(r,each_file))
+		print("---------------")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
