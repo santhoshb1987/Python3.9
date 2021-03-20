@@ -1,0 +1,42 @@
+os.system() from os module:
+---------------------------
+os.system() is used to execute os command.
+
+import os
+os.system("ls")
+os.system("pwd")
+os.system("dir")
+os.system("clear")
+
+os.system("hjy")  --> sh: command not found
+
+rt=os.system("ls")
+--> it will display files 
+
+program.py
+----------
+
+import os
+cmd="date"
+os.system(cmd)
+--> display date
+
+program2.py
+-----------
+
+import os
+cmd="datee"
+rt=os.system(cmd)
+if rt==0:
+	print("your command was successfully executed")
+else
+	print("your command was failed")
+
+
+
+
+
+
+
+
+
