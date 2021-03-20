@@ -1,0 +1,124 @@
+sys.argv of sys modules:
+------------------------
+
+(sys.argv returns a list of command line arguments passed to a Python script)
+
+[santhosh@oc5357850817 python_code]$ cat command_line_args.py 
+import sys
+print(sys.argv)
+
+[santhosh@oc5357850817 python_code]$ python3 command_line_args.py
+['command_line_args.py']
+
+[santhosh@oc5357850817 python_code]$ python3 command_line_args.py hi how are you ?
+['command_line_args.py', 'hi', 'how', 'are', 'you', '?']
+
+
+[santhosh@oc5357850817 python_code]$ cat command_line_args.py 
+import sys
+print(sys.argv)
+
+for i in sys.argv:
+	print(i)
+
+[santhosh@oc5357850817 python_code]$ python3 command_line_args.py hi how are you ?
+['command_line_args.py', 'hi', 'how', 'are', 'you', '?']
+command_line_args.py
+hi
+how
+are
+you
+?
+
+[santhosh@oc5357850817 python_code]$
+import sys
+print(sys.argv)
+print(sys.argv[0]) --> to print 0th element in list
+
+action_on_strings.py
+--------------------
+usr_str=input("Enter your string: ")
+usr_action=input("Enter your action on your string (valid actions are: lower/upper/title): ")
+
+if usr_action=="lower":
+	print(usr_str.lower())
+elif usr_action=="upper":
+	print(usr_str.upper())
+elif usr_action=="title":
+	print(usr_str.title())
+else:
+	print("Your option is invalid")
+
+---> With this example we need to pass the values at runtime
+--> But to pass those values as command line arguments
+
+import sys
+
+usr_str=sys.argv[1]
+usr_action=sys.argv[2]
+
+if usr_action=="lower":
+	print(usr_str.lower())
+elif usr_action=="upper":
+	print(usr_str.upper())
+elif usr_action=="title":
+	print(usr_str.title())
+else:
+	print("Your option is invalid")
+[santhosh@oc5357850817 python_code]$ python3 string_case.py Python upper
+PYTHON
+
+Length of command line arguments:
+---------------------------------
+
+import sys
+print("The no of command line arguments:", len(sys.argv))
+[santhosh@oc5357850817 python_code]$ python len_command_line.py hi how are you
+('The no of command line arguments:', 5)
+
+---> using sys.exit() 
+
+import sys
+
+if len(sys.argv) != 3:
+	print("Usage:")
+	print(f'{sys.argv[0]}  <your_re_string>  <lower|upper|title>')
+	sys.exit()
+usr_str=sys.argv[1]
+usr_action=sys.argv[2]
+
+if usr_action=="lower":
+	print(usr_str.lower())
+elif usr_action=="upper":
+	print(usr_str.upper())
+elif usr_action=="title":
+	print(usr_str.title())
+else:
+	print("Your option is invalid")
+[santhosh@oc5357850817 python_code]$ python3 len_command_line.py PythonsJU
+Usage:
+len_command_line.py  <your_re_string>  <lower|upper|title>
+[santhosh@oc5357850817 python_code]$ python3 len_command_line.py PythonsJU lower
+pythonsju
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
