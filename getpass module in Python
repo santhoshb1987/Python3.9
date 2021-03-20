@@ -34,10 +34,19 @@ C:\Users\Automation>python read_pass.py
 Enter your db pass:
 The entered password: python
 
+[santhosh@oc5357850817 python_code]$ which python3
+/usr/local/bin/python3
 
 
+[santhosh@oc5357850817 python_code]$ cat read_pass.py 
+#!/usr/local/bin/python3
+import getpass
+db_pass=getpass.getpass()
+print(f'The entered password is: {db_pass}')
 
-
+[santhosh@oc5357850817 python_code]$ ./read_pass.py 
+Password: 
+The entered password is: welcome1234567
 
 
 
