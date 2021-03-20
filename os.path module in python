@@ -1,0 +1,119 @@
+os.path module:
+---------------
+
+os.path is a sub module of os and it is used to work on paths.
+
+os.path.sep
+os.path.basename(path)
+os.path.dirname(path)
+os.path.join(path1,path2)
+os.path.split(path) --> used to slpit the path name into a pair head and tail
+os.path.getsize(path) - in bytes
+os.path.exists(path)
+os.path.isfle(path)
+os.path.isdir(path)
+os.path.islink(filename)
+
+
+import os
+dir(os) -- this will list all modules of os
+
+dir(os.path) -- this will list functions related path
+
+print(os.path.sep)
+/ -- will be the output
+
+path_script.py
+--------------
+
+import os
+path="/home/santhosh/test.py")
+print(os.path.basename(path)) -- test.py will display name of the file in the path
+print(os.path.dirname(path))  -- /home/santhosh/ will display the directory of  file
+
+----
+
+path1="/home"
+path2="santhosh"
+print(path1+path2)--> /homesanthosh
+print(path1+'/'+path2) --> /home/santhosh
+
+-----
+
+import os
+print(os.path.join(path1,path2) -- /home/santhosh
+
+path="/home/santhosh/test.py"
+print(os.path.split(path))
+('/home/santhosh','test.py')
+
+print(os.path.getsize(path)) 
+502 - in bytes
+
+print(os.path.exists(path))
+True
+
+simple_program.py
+----------------
+
+import os
+path="/home/santhosh/test.py"
+print(os.path.basename(path))
+print(os.path.dirname(path))
+
+if os.path.exists(path):
+	print("your file is there")
+else:
+	print(f'{path} is not there")
+
+another_program.py
+-----------------
+
+import os
+
+path="/home/santhosh/test.py"
+
+if os.path.isfile(path):
+	print(f'{path} is a file')
+else:
+	print(f'{path} is a dir')
+
+one_more_program.py
+-------------------
+
+import os
+print(os.path.islink("myos"))
+True
+print(os.path.islink("os_path.py"))
+False
+
+
+After time module we will discuss: gettime,getctime, and getmtime
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
