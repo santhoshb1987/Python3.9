@@ -1,0 +1,33 @@
+Practice with os.walk(path):
+----------------------------
+
+Platform independent Python script
+How to do a system wide search for a file?
+
+
+Linux operating system --> "/"
+Windows operating system --> "C:\"
+
+import os
+import string
+import platform
+req_file=input("Enter your file name to search: ")
+
+if platform.system()=="Windows":
+	pd_names=string.ascii_uppercase   --> to get the letters in upper case
+	vd_names=[] --> empty list
+	for each_drive in pd_names:
+		if os.path.exists(each_drive+":\\"):  --> it will check the Drive exists in the windows machine
+			#print(each_drive)
+			vd_names.append(each_drive+":\\")  --> it will add all the exisitng drives in list
+	print(vd_names)
+	for each_drive in vd_names:
+		for r,d,f in os.walk(each_drive):  --> walk through the each drive
+			for each_f in f:    --> file checking
+				if each_f==req_file:
+					print(os.path.join(r,each_f))
+else:
+	for r,d,f in os.walk("/"):
+		for each_file in f:
+			if each_file==req_file:
+				print(os.path.join(r,each_file))
