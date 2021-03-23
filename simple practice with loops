@@ -1,0 +1,18 @@
+Simple practice with loops:
+--------------------------
+Requirement:
+str="python"
+output
+p-->0
+y-->1
+t-->2
+h-->3
+o-->4
+n-->5
+
+
+usr_str=input("enter your string: ")
+index=0
+for each_value in usr_str:
+	print(f'{each_value}-->{index}')
+	index=index+1
