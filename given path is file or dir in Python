@@ -1,0 +1,75 @@
+Practice:
+---------
+
+Read a path and Check if given path is a file or a directory
+
+path_file_dir.py
+---------------
+
+import os
+path=input("Enter your path: ")
+if os.path.isfile(path):
+	print(f'The given path: {path} is a file')
+else:
+	print(f'The given path: {path} is directory')
+
+Enter your path: /home/santhosh
+/home/santhosh is directory
+
+Enter your path: c:\\Users\santhosh
+c:\\Users\santhosh is directory
+
+path_file_dir.py
+---------------
+
+import os
+path=input("Enter your path: ")
+
+if os.path.exists(path):
+	print(f'Given path: {path} is a valid path')
+else:
+	print(f'Given path: {path} is not exisitng on this host')
+
+Enter your path: x:
+Given path: x: is not existing on this host
+
+Enter your path: /home/santhosh/test.py
+Given path: /home/santhosh/test.py is not existing on this host
+
+
+path_file_dir.py
+----------------
+
+import os
+path=input("Enter your path: ")
+
+if os.path.exists(path):
+	print(f'Given path: {path} is a valid path')
+		if os.path.isfile(path):
+			print(f'The given path: {path} is a file')
+		else:
+			print(f'The given path: {path} is directory')
+else:
+	print(f'Given path: {path} is not exisitng on this host')
+
+Enter your path: /home/santhosh/test.py
+Given path: /home/santhosh/test.py is a valid path
+and it is a file 
+
+#This is a platform independet script(you can run on any operating system)
+import os
+path=input("Enter your path: ")
+
+if os.path.exists(path):
+	print(f"Given path : {path}is a valid path")
+	if os.path.isfile(path):
+		print("and it is a file path")
+	else:
+		print("and it is a directory path")
+else:
+	print(f"Given path : {path} is not existing on this host")
+
+
+
+
+
