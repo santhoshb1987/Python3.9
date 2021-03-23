@@ -1,0 +1,64 @@
+>>> path="/home/santhosh"
+>>> import os
+>>> os.listdir(path)  --> It list all the directories and files under /home/santhosh
+
+['.pki', '.mkshrc', 'sqtmax01p.mhc.html.tar', '.win10regtool', 'derby.log', 'fisrt_program.py', 'raw_data_bomberdier_20201221.csv', 'ibm-vpn-linux4.p12_old', 'test.py', 'test.txti', 'ibm-vpn-linux4.p12', 'clientDemo.jks', 'raw_data_bomberdier_20210207.csv', '.fctsslvpnhistory', '.sapgui_accepted_license', 'test.txt', '.freerdp', 'db2support.zip', 'apache-tomcat-8.5.51.tar.gz', '.ibmca', 'test.csv', 'Downloads', 'data.txt', 'mozilla.pdf', 'set_all.sh', 'onefile', 'test.log', 'TEST1', '.gnupg', 'dbmemory_01_07_2021', '.gnome-initial-setup']
+
+
+
+'''
+import os
+import sys
+path=input("Enter your directory path: ")
+if os.path.exists(path):
+	df_l=os.listdir(path)
+else:
+	print("please provide valid path")
+	sys.exit()
+	
+
+print(df_l)
+p1=os.path.join(path,df_l[0])
+p2=os.path.join(path,df_l[1])
+
+if os.path.isfile(p1):
+	print(f"{p1} is a file")
+else:
+	print(f"{p1} is a directory")
+
+if os.path.isfile(p2):
+	print(f"{p2} is a file")
+else:
+	print(f"{p2} is a directory")
+'''
+
+
+
+'''
+print("befor loop")
+
+for each in [2,3,4,5]:
+	print("hello",each)
+
+
+print("after loop")
+'''
+
+import os
+import sys
+path=input("Enter your directory path: ")
+if os.path.exists(path):
+	df_l=os.listdir(path)
+else:
+	print("please provide valid path")
+	sys.exit()
+
+
+list_of_files_dir=os.listdir(path)
+print("all files and dirs: ",list_of_files_dir)
+for each_file_or_dir in list_of_files_dir:
+	f_d_p=os.path.join(path,each_file_or_dir)
+	if os.path.isfile(f_d_p):
+		print(f'{f_d_p} is a file')
+	else:
+		print(f'{f_d_p} is a directory')
