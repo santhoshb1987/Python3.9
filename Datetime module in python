@@ -1,0 +1,52 @@
+datetime module to work with dates and times:
+---------------------------------------------
+
+datetime module:
+----------------
+
+Python built-in or default and used to work with dates and times
+
+import datetime
+dir(datetime)
+
+dir(datetime.datetime)
+
+print(datetime.datetime.now())
+print(datetime.datetime.today())
+
+
+import pytz
+ist=pytz.timezone('Asia/kolkata')
+print(datetime.datetime.now())
+
+print(datetime.datetime.now(ist))
+--> this will print IST time when you are in other timezones on the servers
+
+type(ist)
+<class 'pytz.tzfile.Asia/kolkata'>
+
+print(datetime.datetime.now().year)
+print(datetime.datetime.now().month)
+print(datetime.datetime.now().day)
+print(datetime.datetime.now().hour)
+print(datetime.datetime.now().minute)
+print(datetime.datetime.now().second)
+
+Formatting the dates:
+---------------------
+strftime.org to find more options
+
+print(datetime.datetime.now().strftime("%y-%m-%d")
+
+
+print(datetime.datetime.fromtimestamp(15555555))
+
+datetime.datetime.max  -- Maximum date possible
+
+from datetime import datetime
+
+print(datetime.now())
+
+
+
+
