@@ -1,0 +1,41 @@
+While Loop:
+-----------
+
+The while loop in Python is used to iterate over a block of code as long as the test expression(condition) is true.
+
+We generally use this loop when we dont know before hand the number of times to iterate.
+
+for each in range(10):
+	print("welcome to loops")
+
+to repeat certain number of times using range function but for real time we cannot use range to loop through.
+
+
+
+--> infinate loop
+while True:
+	print("Welcome to loops")
+	print("............................")
+'''
+'''
+import time
+while True:
+	print("MOnitoring file system usage")
+	time.sleep(1)
+'''
+
+
+'''
+value=4
+while value<=6789:
+	print(value)
+	value=value+456
+'''
+
+'''
+cnt=1
+while cnt <=5:
+	print("hello")
+	cnt=cnt+1
+
+'''
