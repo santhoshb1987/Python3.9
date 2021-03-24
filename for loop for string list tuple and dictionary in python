@@ -1,0 +1,67 @@
+For loop for string, list,tuple and dictionaries:
+------------------------------------------------
+
+Strings:
+------
+my_string="working with for loop"
+print(my_string)
+
+print("\n".join(my_string))
+
+for each_chr in my_string:
+	print(each_char)
+
+Lists:
+------
+my_list=[1,2,3,4,5]
+for each_value in my_list:
+	print(each_value)
+
+
+Tuple:
+------
+
+my_tuple=[(1,2),(2,4),(4,5)]
+
+for each_item in my_tuple:
+	print(each_item)
+
+
+>>x,y=(5,6)
+>>print(x)
+5
+>>print(y)
+6
+
+for f,s in my_tuple:
+	print(f,s)
+
+Dictionary:
+-----------
+
+my_dict={'a':1,'b':2}
+for each in my_dict:  --> my_dict.keys()/my_dict.values()/my_dict.items
+	print(each)
+
+for key,value in my_dict.items():
+	print(key)/print(value)/print(key,value)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
