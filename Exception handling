@@ -94,7 +94,7 @@ Exceptions Examples:
 5. TypeError
 6. NameError
 7. FileNotFoundError
-
+8. IOError
 --------------------------------
 ModuleNotFoundError
 
