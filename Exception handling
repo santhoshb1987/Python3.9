@@ -1,0 +1,106 @@
+Exception Handling:
+-------------------
+
+--> A Python program terminates as soon as it encounters an error.
+
+print("Welcome to exception concept"
+
+--> Here you will get an error SyntaxError: Invalid syntax
+
+print(4/0)
+
+--> ZeroDivisionError: division by zero
+
+fo=open("san.txt")  
+
+--> FileNotFoundError  when there is no file
+
+Errors are two types:
+---------------------
+	1. Syntax Errors: No way to handle syntax errors
+	2. Runtime Errors: Exceptions, There is a way to handle runtime errors.
+How to handle Exceptions?
+Ans:
+	with try and except block
+
+try:
+	statement 1
+	statement 2
+except:
+	print("some comments")
+
+try:
+	statements 1
+except Exception as e:
+	print(e)
+
+
+Example 1:
+----------
+try:
+	print(4/0)
+except:
+	print("zero devide errors")
+
+Example 2:
+----------
+
+try:
+	fo=open("san.txt")
+	print(fo.read())
+	fo.close()
+except:
+	print("some problem while reading the san.txt")
+
+Example 3:
+----------
+
+try:
+	fo=open("san.txt")
+	print(fo.read())
+	fo.close()
+except Exception as e:
+	print(e)
+
+Example 4:
+-----------
+
+my_list=[3,4,5]
+print(my_list[4])
+
+IndexError: list index out of range
+
+try:
+	print(my_list[4])
+except Exception as e:
+	print(e)
+
+------------------------------
+How to handle exception?
+--> Exception can be handled using try and exception statement
+--> syntax:
+
+try:
+	Run this code
+except:
+	Run this code if an exception occurs
+
+------------------------------
+Exceptions Examples:
+1. IndexError
+2. ZeroDivisionError
+3. ImportError
+4. ValueError
+5. TypeError
+6. NameError
+7. FileNotFoundError
+
+--------------------------------
+ModuleNotFoundError
+
+try:
+	import fabric
+except Exception as e:
+	print(e)
+
+
