@@ -302,6 +302,57 @@ def main():
 if __name__=="__main__":
    main()
 
+-------------------------------------------
+
+Using __name__ variable
+
+__name__ ?
+
+script1.py
+----------
+
+def add(a,b):
+	print(f"The addition of {a} and {b} is {a+b}")
+	return None
+
+def sub(ab,b:
+	print(f"The sub of {a} and {b} is {a-b}")
+	return None
+
+def main():
+	x=7
+	b=9
+	add(x,y)
+	sub(x,y)
+	return None
+
+if __name__=="__main__":
+	main()
+
+script2.py
+----------
+
+import script1
+
+def mul(a,b):
+	print(f"The mult of {a} and {b} is {a*b}")
+	return None
+
+def main():
+	x=10
+	y=20
+	script1.add(x,y)
+        return None
+
+if __name__=="__main__":
+	main()
+
+*** When ever you call script1 from script2 whithout __name__ then it will print add and sub of script1
+
+*** __name__ returns __main__ in the same script
+
+*** but if you call script1 in script2 then __name__ will return "script1"
+
 
 
 
