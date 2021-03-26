@@ -1,0 +1,87 @@
+Regular Expressions(RegEx):
+---------------------------
+
+-> The Regex is a procedure in any language to look for a specified pattern in agiven text
+-> re is the module to perform regex in Python. (Use import re in scripts)
+-> There are different operations in re like:
+	-> search,match,finditer,findall,split,sub etc... 
+
+-> Syntax:
+	re.search(pattern,text)
+	re.match(pattern,text)
+	re.finditer(pattern,text)
+	re.findall(pattern,text)
+
+-> Pattern is a sequence of characters which represent multiple strings.
+-> Simple examples for pattern
+	-> "Python"
+	-> "python[23]" -> "python2" "python3"
+	-> r"python"  or r"python[23]  --> raw string 
+
+-->Learning pattern creation with findall operation:
+
+How to use findall?
+
+import re
+print(re.findall(pattern,text))
+
+Basic Rules: 
+------------
+a,x,9 --> Ordinary characters that match themselves
+[abc] --> Matches a or b or c
+[a-c] --> matches a or b or or c
+[a-zA-Z0-9]  --> Matches any letter from (a to z) or (A to Z) or (0 to 9)
+\w --> Matches any single letter,digit or underscore
+\W --> Matches any character not part of \w
+\d --> Matches decimal digit 0-9
+.  --> Matches any single character except newline character
+
+
+Example 1:
+----------
+
+my_str="This is a python and it is easy to learn"
+my_pat="is"
+print(re.findall(my_pat,my_str))
+
+--> this will print 3 is in the string my_str
+['is','is','is']
+
+
+Example 2:
+---------
+
+import re
+text="This . is a python and it is easy to learn and it is popular one for dev and automation"
+'''
+my_pat= 'i[ston]' #is,it,io,in
+#print(len(re.findall(my_pat,text)))
+print(re.findall(my_pat,text))
+
+'''
+
+
+#my_pat="x[abcdeflmnopq]y" ==> xay,xby.....xqy
+#      ="x[a-fl-q]y"
+'''
+my_pat='\.'
+print(re.findall(my_pat,text))
+'''
+'''
+text="This is a ip address of my db1 server: 255.255.255.255  2456234512341234"
+
+my_pat="\d\d\d\.\d\d\d\.\d\d\d\.\d\d\d"
+print(re.findall(my_pat,text))
+'''
+
+
+'''
+text="This is python @ 345 _ - ("
+print(re.findall('\w',text))
+#print(re.findall('.',text))
+print(re.findall("\W",text))
+'''
+
+
+text="456 90 this is about deciaml re98gex"
+print(re.findall('\d\d',text))
