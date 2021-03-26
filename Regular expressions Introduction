@@ -1,0 +1,35 @@
+What is Regular Expression(RegEx) ?
+-----------------------------------
+
+--> The regex is a procedure in any language to look for a specied pattern in agiven text.
+--> What is a pattern?
+	It is a sequence of chanracters,which represent multiple strings
+
+Examples:
+
+'i[st]'  --> is,it
+'python[23]' --> python2,python3
+
+1. Split the string based on two words:
+
+>>> my_str"python is simple and it easy"
+>>> my_str.split("is")
+['python ',' simple and it easy']
+>>> my_str.split("it")
+['python is simple and ',' easy']
+>>> import re
+>>> re.split("i[st]",my_str)
+['python ','simple and ',' easy']
+
+
+Python module for Regular Expressions: re
+-----------------------------------------
+
+--> The different operations in python re are:
+	match()
+	search()
+	findall()
+	finditer()
+	sub()
+	split()
+	compile() etc...
